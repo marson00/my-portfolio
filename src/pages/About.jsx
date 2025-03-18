@@ -1,7 +1,23 @@
 import React from "react";
 import expertisePic from "../assets/expertise-pic.jpg";
+import { IoLogoVercel } from "react-icons/io5";
 
 function About() {
+  const gridColVariants = {
+    hidden: { opacity: 0 },
+    show: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.3,
+      },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 50 },
+    show: { opacity: 1, y: 0, transition: { duration: 0.6 } },
+  };
+
   return (
     <section id="about" className="p-8">
       <h2 className="text-4xl md:text-6xl font-bold mb-8">
@@ -9,8 +25,9 @@ function About() {
         <span className="text-violet-500"> Me</span>
       </h2>
 
-      {/* Background */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+  
+        {/* Background */}
         <div className="border border-white/20 rounded-lg p-6">
           <h3 className="text-2xl font-bold mb-2">01. Background</h3>
           <p className="mb-6 text-white/50">
@@ -107,7 +124,53 @@ function About() {
           </div>
         </div>
       </div>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
+        <div className="border border-white/20 rounded-lg p-6">
+          {/* About - Rating */}
+          <h3 className="text-2xl font-bold mb-2">04. Rating</h3>
+          <div className="space-y-4">
+            <div>
+              <label className="block text-sm mb-1">Cloud</label>
+              <div className="w-full bg-white/10 rounded-full h-2">
+                <div className="bg-violet-300 h-2 rounded-full w-2/6"></div>
+              </div>
+            </div>
+
+            <div>
+              <label className="block text-sm mb-1">Frontend</label>
+              <div className="w-full bg-white/10 rounded-full h-2">
+                <div className="bg-violet-300 h-2 rounded-full w-5/6"></div>
+              </div>
+            </div>
+
+            <div>
+              <label className="block text-sm mb-1">Backend</label>
+              <div className="w-full bg-white/10 rounded-full h-2">
+                <div className="bg-violet-300 h-2 rounded-full w-4/6"></div>
+              </div>
+            </div>
+
+            <div>
+              <label className="block text-sm mb-1">Database</label>
+              <div className="w-full bg-white/10 rounded-full h-2">
+                <div className="bg-violet-300 h-2 rounded-full w-6/8"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* About - Goals */}
+        <div className="border border-white/20 rounded-lg p-6">
+          <h3 className="text-2xl font-bold mb-2">05. Goals</h3>
+          <p className="text-white/50">
+            My goal is to continue develop as a full stack developer and
+            contribute to the tech community.
+          </p>
+        </div>
+      </div>
     </section>
+    // https://www.youtube.com/watch?v=TzuRmYtL3dM&list=PLMx8mmGG2tr0yyCDu716sjMZHYo39zsig&index=4
   );
 }
 

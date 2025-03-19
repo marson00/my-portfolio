@@ -22,11 +22,10 @@ function About() {
     <section id="about" className="p-8">
       <h2 className="text-4xl md:text-6xl font-bold mb-8">
         About
-        <span className="text-violet-500"> Me</span>
+        <span className="text-violet-300"> Me</span>
       </h2>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-  
         {/* Background */}
         <div className="border border-white/20 rounded-lg p-6">
           <h3 className="text-2xl font-bold mb-2">01. Background</h3>

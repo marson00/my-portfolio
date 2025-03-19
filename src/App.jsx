@@ -1,12 +1,14 @@
 import "./App.css";
-import About from "./pages/About";
-import Hero from "./pages/Hero";
+import About from "./components/About";
+import Hero from "./components/Hero";
+import Projects from "./components/Projects";
 
 function App() {
   return (
     <>
       <Hero />
       <About />
+      <Projects />
     </>
   );
 }

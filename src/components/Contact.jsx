@@ -2,7 +2,7 @@ import React from "react";
 
 function Contact() {
   return (
-    <section id="contact" className="p-8">
+    <section id="contact" className="p-8 pt-24 md:pt-40">
       <div className="max-w-[1200px] mx-auto px-4">
         <div className="flex flex-col md:flex-row justify-between items-start md:item-center gap-8">
           {/* Contact - Email */}

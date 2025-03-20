@@ -29,16 +29,22 @@ function Stack() {
     }
   }, [controls, inView]);
 
+  // Change the animation position for mobile size
+  const isMobileScreen = window.innerWidth < 400;
+
   return (
     <section
       id="stacks"
-      className="py-24 md:py-64 max-w-[1200px] mx-auto text-center"
+      className="px-8 py-24 md:py-40 max-w-[1200px] mx-auto text-center"
     >
-        {/* Stacks */}
+      {/* Stacks */}
       <h2 className="text-4xl md:text-6xl font-bold mb-16 text-center">
         My <span className="text-violet-300">Stacks</span>
       </h2>
-      <div className="flex flex-wrap justify-center mx-8 gap-6 md:gap-12" ref={ref}>
+      <div
+        className="flex flex-wrap justify-center mx-8 gap-6 md:gap-12"
+        ref={ref}
+      >
         {stacks.map((stack, i) => (
           <motion.div
             key={i}
@@ -48,10 +54,11 @@ function Stack() {
             variants={{
               hidden: (index) => ({
                 opacity: 0,
-                y: index % 2 === 0 ? -100 : 100, // even num icon fade from bottom to top
+                [isMobileScreen ? "x" : "y"]: index % 2 === 0 ? -100 : 100, // even num icon fade from bottom to top
               }),
               visible: {
                 opacity: 1,
+                x: 0,
                 y: 0,
                 transition: {
                   duration: 1.5,

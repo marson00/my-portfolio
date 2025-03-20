@@ -33,7 +33,7 @@ function About() {
   ];
 
   return (
-    <section id="about" className="p-8">
+    <section id="about" className="p-8 pb-24 md:pb-40">
       <h2 className="text-4xl md:text-6xl font-bold mb-8">
         About
         <span className="text-violet-300"> Me</span>

@@ -32,7 +32,7 @@ function Experience() {
   ];
 
   return (
-    <section id="experience" className="p-8 py-24 md:py-64">
+    <section id="experience" className="px-8 py-24 md:py-40">
       <div className="mx-auto px-4">
         <h2 className="text-4xl md:text-6xl font-bold mb-16 text-center">
           My <span className="text-violet-300">Experience</span>

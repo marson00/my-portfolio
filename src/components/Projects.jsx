@@ -45,7 +45,7 @@ function Projects() {
   };
 
   return (
-    <section id="projects" className="p-8 py-24 md:py-40">
+    <section id="projects" className="px-8 py-24 md:py-40">
       {/* Projects - Container */}
       <div className="container mx-auto px-4">
         <h2 className="text-4xl md:text-6xl font-bold mb-16 text-center">

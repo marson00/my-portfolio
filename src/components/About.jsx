@@ -33,8 +33,8 @@ function About() {
   ];
 
   return (
-    <section id="about" className="p-8 pb-24 md:pb-40">
-      <h2 className="text-4xl md:text-6xl font-bold mb-8">
+    <section id="about" className="p-8 py-24 md:py-40">
+      <h2 className="text-4xl md:text-6xl font-bold mb-16 text-center">
         About
         <span className="text-violet-300"> Me</span>
       </h2>
@@ -93,7 +93,7 @@ function About() {
           </p>
 
           {/* Skills - Grid */}
-          <div className="grid sm:grid-cols-1 md:grid-cols-2 2xl:grid-cols-4 text-center gap-4">
+          <div className="grid sm:grid-cols-1 lg:grid-cols-2 2xl:grid-cols-4 text-center gap-4">
             {skills.map((skill, i) => (
               <div key={i} className="border border-white/20 rounded-lg p-3">
                 <h4 className="text-violet-300 mb-2">{skill.category}</h4>

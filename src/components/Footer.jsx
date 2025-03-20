@@ -12,13 +12,21 @@ function Footer() {
       </p>
 
       <ul className="flex flex-wrap gap-10">
-        <a href="" target="_blank" className="">
+        <a href="https://github.com/marson00" target="_blank" className="">
           <AiFillGithub size={30} />
         </a>
-        <a href="" target="_blank" className="">
+        <a
+          href="https://www.linkedin.com/in/lee-ting-le-mars1019/"
+          target="_blank"
+          className=""
+        >
           <AiFillLinkedin size={30} />
         </a>
-        <a href="" target="_blank" className="">
+        <a
+          href="https://www.instagram.com/__marson.__/"
+          target="_blank"
+          className=""
+        >
           <AiFillInstagram size={30} />
         </a>
       </ul>

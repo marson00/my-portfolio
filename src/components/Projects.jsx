@@ -4,13 +4,14 @@ import { FiChevronDown } from "react-icons/fi";
 import { HiOutlineExternalLink } from "react-icons/hi";
 import { FaGithub } from "react-icons/fa";
 import project1 from "../assets/project1.png";
-
+import project2 from "../assets/project2.png";
+import project3 from "../assets/project3.png";
 
 const projects = [
   {
-    title: "Project 1",
+    title: "Sign Language Translation",
     src: project1,
-    desc: "This is a web application which aims to reduce the communication barrier between hearing and deaf individuals.",
+    desc: "A web application which implemented machine learning algorithm to recognize and translate sign language into text.",
     devStack:
       "PHP, MySQL, Python (OpenCV, MediaPipe, TensorFlow), Flask, Neural Network (CNN & LSTM)",
     link: "#",
@@ -18,19 +19,19 @@ const projects = [
     type: "Localhost",
   },
   {
-    title: "Project 2",
-    src: "pic",
-    desc: "XXX xxx XXX",
-    devStack: "PHP, MySQL",
+    title: "E-Commerce Web App",
+    src: project2,
+    desc: "A web-based shopping platform built with user authentication, product management, shopping cart, order history, fake payment processing and product ratings.",
+    devStack: "Java, MySQL, BootStrap, NetBean, MVC",
     link: "#",
     git: "",
     type: "Localhost",
   },
   {
-    title: "Project 3",
-    src: "pic",
-    desc: "XXX xxx XXX",
-    devStack: "PHP, MySQL",
+    title: "Admin Dashboard",
+    src: project3,
+    desc: "A web-based admin panel build with PHP for managing users, products and report. Features incude authentication, role-based access control and CRUD opetaions.",
+    devStack: "PHP, MySQL, RESTful API, XML, jQuery",
     link: "#",
     git: "",
     type: "Localhost",
@@ -93,11 +94,11 @@ function Projects() {
                     transition={{ duration: 0.3 }}
                     className="bg-black/20 border border-white/10"
                   >
-                    <div className="flex flex-col md:flex-row gap-6">
+                    <div className="flex flex-col md:flex-row md:gap-4">
                       <img
                         src={project.src}
                         alt={project.title}
-                        className="w-full md:w-1/2 h-62 object-cover"
+                        className="w-full md:w-1/2 h-auto max-md:h-full object-cover"
                       />
                       <div className="flex-1 m-4">
                         <p className="text-white/70 mb-4">{project.desc}</p>

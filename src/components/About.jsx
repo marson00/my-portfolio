@@ -1,8 +1,15 @@
 import React from "react";
+import { motion } from "framer-motion";
 import expertisePic from "../assets/expertise-pic.jpg";
-import { IoLogoVercel } from "react-icons/io5";
 
 function About() {
+  const ratings = [
+    { name: "Cloud", value: 40 },
+    { name: "Frontend", value: 70 },
+    { name: "Backend", value: 90 },
+    { name: "Database", value: 60 },
+  ];
+
   const gridColVariants = {
     hidden: { opacity: 0 },
     show: {
@@ -129,33 +136,19 @@ function About() {
           {/* About - Rating */}
           <h3 className="text-2xl font-bold mb-2">04. Rating</h3>
           <div className="space-y-4">
-            <div>
-              <label className="block text-sm mb-1">Cloud</label>
-              <div className="w-full bg-white/10 rounded-full h-2">
-                <div className="bg-violet-300 h-2 rounded-full w-2/6"></div>
+            {ratings.map((rating, i) => (
+              <div key={i}>
+                <label className="block text-sm mb-1">{rating.name}</label>
+                <div className="w-full bg-white/10 rounded-full h-2">
+                  <motion.div
+                    initial={{ width: 0 }}
+                    whileInView={{ width: `${rating.value}%` }}
+                    transition={{ duration: 1.5, ease: "easeInOut" }}
+                    className="h-full bg-violet-300 rounded-full"
+                  ></motion.div>
+                </div>
               </div>
-            </div>
-
-            <div>
-              <label className="block text-sm mb-1">Frontend</label>
-              <div className="w-full bg-white/10 rounded-full h-2">
-                <div className="bg-violet-300 h-2 rounded-full w-5/6"></div>
-              </div>
-            </div>
-
-            <div>
-              <label className="block text-sm mb-1">Backend</label>
-              <div className="w-full bg-white/10 rounded-full h-2">
-                <div className="bg-violet-300 h-2 rounded-full w-4/6"></div>
-              </div>
-            </div>
-
-            <div>
-              <label className="block text-sm mb-1">Database</label>
-              <div className="w-full bg-white/10 rounded-full h-2">
-                <div className="bg-violet-300 h-2 rounded-full w-6/8"></div>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
 

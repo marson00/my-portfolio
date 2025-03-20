@@ -10,7 +10,7 @@ function Hero() {
     bg-[linear-gradient(to_bottom,#000,#1A051D_35%,#3A1B47_65%,#5E3370_85%)]"
     >
       {/* Hero - Container */}
-      <div className="container mx-auto px-4 pt-12 pb-24">
+      <div className="container mx-auto px-4 pt-20 pb-24">
         <div className="flex flex-col justify-center items-center text-center z-10">
           {/* Hero - Profile Picture */}
           <motion.div
@@ -62,6 +62,11 @@ function Hero() {
               </motion.button>
               <motion.button
                 whileHover={{ scale: 1.05 }}
+                onClick={() =>
+                  document
+                    .getElementById("contact")
+                    .scrollIntoView({ behavior: "smooth", duration: 2 })
+                }
                 className="border border-white/20 rounded-full px-6 py-3 hover:bg-white/10 transition-colors"
               >
                 Contact Me

@@ -10,6 +10,7 @@ function Navbar() {
     { name: "About", path: "#about" },
     { name: "Projects", path: "#projects" },
     { name: "Stacks", path: "#stacks" },
+    { name: "Experience", path: "#experience" },
     { name: "Contact", path: "#contact" },
   ];
 
@@ -39,7 +40,7 @@ function Navbar() {
       {/* Navbar - Small Size (Expand & Collapse) */}
       <div
         onClick={toggleNavBar}
-        className="block md:hidden absolute top-5 right-14 border border-white/70 p-2 z-100 rounded"
+        className="block md:hidden absolute top-5 right-10 border border-white/70 p-2 z-100 rounded"
       >
         {nav ? <AiOutlineClose /> : <AiOutlineMenu />}
       </div>

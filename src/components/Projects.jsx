@@ -44,7 +44,7 @@ function Projects() {
       {/* Projects - Container */}
       <div className="container mx-auto px-4">
         <h2 className="text-4xl md:text-6xl font-bold mb-16 text-center">
-          Selected <span className="text-violet-300">Projects</span>
+          My <span className="text-violet-300">Projects</span>
         </h2>
 
         <div className="space-y-8">

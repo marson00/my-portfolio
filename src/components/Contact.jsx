@@ -13,7 +13,7 @@ function Contact() {
             <a
               href="mailto:tllee2687@gmail.com"
               target="_blank"
-              className="text-4xl max-sm:text-2xl md:text-6xl font-semibold underline decoration-gray-400 decoration-3"
+              className="text-4xl max-sm:text-2xl md:text-5xl font-semibold underline decoration-gray-400 decoration-3"
             >
               tllee2687@gmail.com
             </a>
@@ -34,7 +34,7 @@ function Contact() {
 
         {/* Contact - Name */}
         <div className="z-10 text-center mt-8 py-12">
-          <h1 className="text-8xl md:text-[130px] lg:text-[160px] font-bold text-white/10 flex flex-col md:flex-row justify-center">
+          <h1 className="text-8xl max-sm:text-6xl md:text-[120px] lg:text-[160px] font-bold text-white/10 flex flex-col md:flex-row justify-center">
             <span>MARSON</span>
             <span>LEE</span>
           </h1>

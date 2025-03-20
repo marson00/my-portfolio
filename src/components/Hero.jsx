@@ -2,6 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import profilePic from "../assets/profile-pic.png";
 import { TypeAnimation } from "react-type-animation";
+import resume from "../../public/TingLe_SoftwareEngineer_Resume.pdf";
 
 function Hero() {
   return (
@@ -54,12 +55,15 @@ function Hero() {
 
             {/* Hero - Resume & Contact Btn */}
             <div className="flex gap-8 justify-center">
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                className="bg-violet-700 rounded-full px-6 py-3 hover:bg-violet-600 transition-colors"
-              >
-                Download CV
-              </motion.button>
+              <a href={resume} download="MarsonLee_Resume.pdf">
+                <motion.button
+                  whileHover={{ scale: 1.05 }}
+                  className="bg-violet-700 rounded-full px-6 py-3 hover:bg-violet-600 transition-colors"
+                >
+                  Download CV
+                </motion.button>
+              </a>
+
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 onClick={() =>

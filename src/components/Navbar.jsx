@@ -8,9 +8,9 @@ import {
 function Navbar() {
   const navigations = [
     { name: "About", path: "#about" },
+    { name: "Experience", path: "#experience" },
     { name: "Projects", path: "#projects" },
     { name: "Stacks", path: "#stacks" },
-    { name: "Experience", path: "#experience" },
     { name: "Contact", path: "#contact" },
   ];
 
@@ -54,7 +54,11 @@ function Navbar() {
         <ul className="flex flex-col justify-center items-center space-y-10 h-full">
           {navigations.map((nav, i) => (
             <li key={i}>
-              <a href={nav.path} onClick={toggleNavBar} className="hover:skew-x12 hover:text-violet-200 duration-300 ease-in-out transition-colors text-4xl">
+              <a
+                href={nav.path}
+                onClick={toggleNavBar}
+                className="hover:skew-x12 hover:text-violet-200 duration-300 ease-in-out transition-colors text-4xl"
+              >
                 {nav.name}
               </a>
             </li>

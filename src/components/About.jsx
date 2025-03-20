@@ -1,6 +1,9 @@
 import React from "react";
 import { motion } from "framer-motion";
-import expertisePic from "../assets/expertise-pic.jpg";
+import backgroundPic from "../assets/my-background-pic.jpg";
+import { FaTrophy } from "react-icons/fa";
+import { IoCalendarClearSharp } from "react-icons/io5";
+import { RiBarChart2Fill } from "react-icons/ri";
 
 function About() {
   const ratings = [
@@ -10,20 +13,24 @@ function About() {
     { name: "Database", value: 60 },
   ];
 
-  const gridColVariants = {
-    hidden: { opacity: 0 },
-    show: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.3,
-      },
+  const skills = [
+    { category: "Cloud", languages: ["Vercel", "Firebase"] },
+    {
+      category: "Frontend",
+      languages: [
+        "HTML/CSS",
+        "JavaScript",
+        "Tailwind CSS",
+        "React.js",
+        "Vue.js",
+      ],
     },
-  };
-
-  const itemVariants = {
-    hidden: { opacity: 0, y: 50 },
-    show: { opacity: 1, y: 0, transition: { duration: 0.6 } },
-  };
+    {
+      category: "Backend",
+      languages: ["C#", "Node.js", "Java", "RESTful API"],
+    },
+    { category: "Database", languages: ["MySQL", "Postgres"] },
+  ];
 
   return (
     <section id="about" className="p-8">
@@ -37,15 +44,33 @@ function About() {
         <div className="border border-white/20 rounded-lg p-6">
           <h3 className="text-2xl font-bold mb-2">01. Background</h3>
           <p className="mb-6 text-white/50">
-            I am a pasionate software engineer with strong foundation in
-            software system development and love for creating innovative web
-            solutions.
+            I am a passionate software engineer focused on building seamless and
+            efficient web applications. I enjoy solving challenges and creating
+            innovative web solution.
+          </p>
+
+          {/* Expertise - Image */}
+          <div className="relative mt-4 border border-white/20 rounded-lg p-4 h-[260px] overflow-hidden">
+            <img
+              src={backgroundPic}
+              alt="expertise photo"
+              className="absolute inset-0 w-full h-full object-cover"
+            />
+          </div>
+        </div>
+
+        {/* Expertise */}
+        <div className="border border-white/20 rounded-lg p-6">
+          <h3 className="text-2xl font-bold mb-2">02. Expertise</h3>
+          <p className="mb-6 text-white/50">
+            Skilled in both frontend and backend development, delivering
+            interactive UIs and robust system functionality.
           </p>
 
           {/* Background - Code */}
           <div className="border border-white/20 rounded-lg p-4 mb-4">
             <code className="text-violet-300 block">
-              const skills = [<br />
+              const expertise = [<br />
               <span className="ml-4">'Cloud',</span>
               <br />
               <span className="ml-4">'Frontend',</span>
@@ -59,74 +84,26 @@ function About() {
           </div>
         </div>
 
-        {/* Expertise */}
-        <div className="border border-white/20 rounded-lg p-6">
-          <h3 className="text-2xl font-bold mb-2">02. Expertise</h3>
-          <p className="mb-6 text-white/50">
-            My expertise spans both front-end and back-end development, allowing
-            me to create end-to-end solutions.
-          </p>
-
-          {/* Expertise - Image */}
-          <div className="relative mt-4 border border-white/20 rounded-lg p-4 h-[260px] overflow-hidden">
-            <img
-              src={expertisePic}
-              alt="expertise photo"
-              className="absolute inset-0 w-full h-full object-cover"
-            />
-          </div>
-        </div>
-
         {/* Skills */}
         <div className="border border-white/20 rounded-lg p-6">
           <h3 className="text-2xl font-bold mb-2">03. Skills</h3>
           <p className="mb-6 text-white/50">
-            I am proficient in a wide range of technologies to stay at the
-            forefront of web development.
+            Practical experience with a variety of technologies. My skill set
+            includes:
           </p>
 
           {/* Skills - Grid */}
           <div className="grid sm:grid-cols-1 md:grid-cols-2 2xl:grid-cols-4 text-center gap-4">
-            {/* Cloud */}
-            <div className="border border-white/20 rounded-lg p-3">
-              <h4 className="text-violet-300 mb-2">Cloud</h4>
-              <ul className="text-white/50 space-y-1 text-sm">
-                <li>Vercel</li>
-                <li>Firebase</li>
-              </ul>
-            </div>
-
-            {/* Frontend */}
-            <div className="border border-white/20 rounded-lg p-3">
-              <h4 className="text-violet-300 mb-2">Frontend</h4>
-              <ul className="text-white/50 space-y-1 text-sm">
-                <li>HTML/CSS</li>
-                <li>JavaScript</li>
-                <li>Tailwind CSS</li>
-                <li>React.js</li>
-                <li>Vue.js</li>
-              </ul>
-            </div>
-
-            {/* Backend */}
-            <div className="border border-white/20 rounded-lg p-3">
-              <h4 className="text-violet-300 mb-2">Backend</h4>
-              <ul className="text-white/50 space-y-1 text-sm">
-                <li>C#</li>
-                <li>Node.js</li>
-                <li>Java</li>
-                <li>RESTful API</li>
-              </ul>
-            </div>
-
-            {/* Database */}
-            <div className="border border-white/20 rounded-lg p-3">
-              <h4 className="text-violet-300 mb-2">Database</h4>
-              <ul className="text-white/50 space-y-1 text-sm">
-                <li>Postgres</li>
-                <li>MySQL</li>
-              </ul>
-            </div>
+            {skills.map((skill, i) => (
+              <div key={i} className="border border-white/20 rounded-lg p-3">
+                <h4 className="text-violet-300 mb-2">{skill.category}</h4>
+                <ul className="text-white/50 space-y-1 text-sm">
+                  {skill.languages.map((language, i) => (
+                    <li key={i}>{language}</li>
+                  ))}
+                </ul>
+              </div>
+            ))}
           </div>
         </div>
       </div>
@@ -135,7 +112,7 @@ function About() {
         <div className="border border-white/20 rounded-lg p-6">
           {/* About - Rating */}
           <h3 className="text-2xl font-bold mb-2">04. Rating</h3>
-          <div className="space-y-4">
+          <div className="space-y-8">
             {ratings.map((rating, i) => (
               <div key={i}>
                 <label className="block text-sm mb-1">{rating.name}</label>
@@ -152,17 +129,35 @@ function About() {
           </div>
         </div>
 
-        {/* About - Goals */}
+        {/* About - Education */}
         <div className="border border-white/20 rounded-lg p-6">
-          <h3 className="text-2xl font-bold mb-2">05. Goals</h3>
-          <p className="text-white/50">
-            My goal is to continue develop as a full stack developer and
-            contribute to the tech community.
-          </p>
+          <h3 className="text-2xl font-bold mb-2">05. Education</h3>
+          <div className="text-white/75 space-y-3">
+            <h4 className="text-lg font-semibold">
+              Tunku Abdul Rahman University of Management and Technology
+              (TARUMT)
+            </h4>
+            <p className="text-sm">
+              Bachelor’s Degree in Information Technology (Honours) in Software
+              System Development
+            </p>
+            <p className="text-sm flex items-center">
+              <IoCalendarClearSharp className="mr-2 text-red-300" />
+              <span className="font-semibold mr-2">Period:</span> 2020 - 2024
+            </p>
+            <p className="text-sm flex items-center">
+              <RiBarChart2Fill className="mr-2 text-orange-300" />
+              <span className="font-semibold mr-2">CGPA:</span> 3.79 / 4.00
+            </p>
+            <p className="text-sm ">
+              <FaTrophy className="mr-2 text-yellow-300 float-left mt-0.5" />
+              <span className="font-semibold">Achievement:</span>&nbsp; Best
+              Design Award for Final Year Project
+            </p>
+          </div>
         </div>
       </div>
     </section>
-    // https://www.youtube.com/watch?v=TzuRmYtL3dM&list=PLMx8mmGG2tr0yyCDu716sjMZHYo39zsig&index=4
   );
 }
 

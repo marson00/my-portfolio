@@ -1,34 +1,39 @@
 import React, { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import pic from "../assets/expertise-pic.jpg";
 import { FiChevronDown } from "react-icons/fi";
 import { HiOutlineExternalLink } from "react-icons/hi";
 import { FaGithub } from "react-icons/fa";
+import project1 from "../assets/project1.png";
+
 
 const projects = [
   {
     title: "Project 1",
-    src: pic,
-    desc: "XXX xxx XXX",
-    devStack: "PHP, MySQL",
+    src: project1,
+    desc: "This is a web application which aims to reduce the communication barrier between hearing and deaf individuals.",
+    devStack:
+      "PHP, MySQL, Python (OpenCV, MediaPipe, TensorFlow), Flask, Neural Network (CNN & LSTM)",
     link: "#",
-    git: "#",
+    git: "",
+    type: "Localhost",
   },
   {
     title: "Project 2",
-    src: pic,
+    src: "pic",
     desc: "XXX xxx XXX",
     devStack: "PHP, MySQL",
     link: "#",
-    git: "#",
+    git: "",
+    type: "Localhost",
   },
   {
     title: "Project 3",
-    src: pic,
+    src: "pic",
     desc: "XXX xxx XXX",
     devStack: "PHP, MySQL",
     link: "#",
-    git: "#",
+    git: "",
+    type: "Localhost",
   },
 ];
 
@@ -97,9 +102,15 @@ function Projects() {
                       <div className="flex-1 m-4">
                         <p className="text-white/70 mb-4">{project.desc}</p>
                         <p className="text-violet-300 mb-4">
-                          Stack: {project.devStack}
+                          Core Stack: <br />
+                          {project.devStack}
                         </p>
-                        <div className="flex justify-start items-center space-x-4">
+                        <p>Type: {project.type}</p>
+                        <div
+                          className={`flex justify-start items-center space-x-4 ${
+                            project.type === "Localhost" ? "hidden" : ""
+                          }`}
+                        >
                           <a
                             href={project.link}
                             className="text-violet-400 hover:text-fuchsia-200 transition-colors"

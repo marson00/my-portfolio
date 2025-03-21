@@ -38,6 +38,7 @@ const projects = [
   },
 ];
 
+
 function Projects() {
   const [expandIndex, setExpandIndex] = useState();
 
@@ -94,11 +95,11 @@ function Projects() {
                     transition={{ duration: 0.3 }}
                     className="bg-black/20 border border-white/10"
                   >
-                    <div className="flex flex-col md:flex-row md:gap-4 h-auto">
+                    <div className="flex flex-col md:flex-row md:gap-4">
                       <img
                         src={project.src}
                         alt={project.title}
-                        className="w-full md:w-1/2 h-auto max-md:h-full object-cover"
+                        className="w-full md:w-1/2 h-60 md:h-80 lg:h-100 object-cover"
                       />
                       <div className="flex-1 m-4">
                         <p className="text-white/70 mb-4">{project.desc}</p>

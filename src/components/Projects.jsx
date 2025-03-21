@@ -94,7 +94,7 @@ function Projects() {
                     transition={{ duration: 0.3 }}
                     className="bg-black/20 border border-white/10"
                   >
-                    <div className="flex flex-col md:flex-row md:gap-4">
+                    <div className="flex flex-col md:flex-row md:gap-4 h-auto">
                       <img
                         src={project.src}
                         alt={project.title}

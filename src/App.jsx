@@ -7,6 +7,7 @@ import Hero from "./components/Hero";
 import Navbar from "./components/Navbar";
 import Projects from "./components/Projects";
 import Stack from "./components/Stack";
+import { Analytics } from "@vercel/analytics/react"
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
       <Stack />
       <Contact />
       <Footer />
+      <Analytics />
     </>
   );
 }

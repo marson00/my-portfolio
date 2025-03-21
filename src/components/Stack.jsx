@@ -35,7 +35,7 @@ function Stack() {
   return (
     <section
       id="stacks"
-      className="px-8 py-24 md:py-40 max-w-[1200px] mx-auto text-center"
+      className="px-8 py-24 md:py-40 max-w-[1400px] mx-auto text-center"
     >
       {/* Stacks */}
       <h2 className="text-4xl md:text-6xl font-bold mb-16 text-center">

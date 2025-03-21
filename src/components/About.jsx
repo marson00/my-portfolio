@@ -27,7 +27,7 @@ function About() {
     },
     {
       category: "Backend",
-      languages: ["C#", "Node.js", "Java", "RESTful API"],
+      languages: ["C#", "Java", "PHP", "Node.js", "Python", "RESTful API",],
     },
     { category: "Database", languages: ["MySQL", "Postgres"] },
   ];

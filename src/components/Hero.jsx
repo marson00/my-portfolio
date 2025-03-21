@@ -55,7 +55,7 @@ function Hero() {
 
             {/* Hero - Resume & Contact Btn */}
             <div className="flex gap-8 justify-center">
-              <a href={resume} download="MarsonLee_Resume.pdf">
+              <a href={resume} download="TingLe_SoftwareEngineer_Resume.pdf">
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   className="bg-violet-700 rounded-full px-6 py-3 hover:bg-violet-600 transition-colors"

@@ -2,7 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import profilePic from "../assets/profile-pic.png";
 import { TypeAnimation } from "react-type-animation";
-import resume from "../../public/TingLe_SoftwareEngineer_Resume.pdf";
+import resume from "../assets/TingLe_SoftwareEngineer_Resume.pdf";
 
 function Hero() {
   return (

@@ -24,7 +24,7 @@ function Experience() {
     {
       name: "Sophic Automation",
       position: "Software Engineer",
-      period: "Aug 2024 - Present",
+      period: "Aug 2024 - March 2025",
       link: "https://sophicautomation.com/",
       description:
         "I specialize in designing, developing, and maintaining dashboard web systems that transform data into meaningful visual insights.",
